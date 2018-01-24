@@ -9,10 +9,11 @@
 
 @implementation LRCircleMenuItem
 
-+ (instancetype)itemWithIcon:(NSString *)icon title:(NSString *)title {
++ (instancetype)itemWithIcon:(NSString *)icon title:(NSString *)title class:(Class)cls{
     LRCircleMenuItem *item = [[LRCircleMenuItem alloc] init];
     item.icon = icon;
     item.title = title;
+    item.cls = cls;
     return item;
 }
 

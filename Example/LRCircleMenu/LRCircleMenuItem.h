@@ -11,7 +11,8 @@
 
 @property (nonatomic, copy) NSString *icon;
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, strong)Class cls;
 
-+ (instancetype)itemWithIcon:(NSString *)icon title:(NSString *)title;
++ (instancetype)itemWithIcon:(NSString *)icon title:(NSString *)title class:(Class)cls;
 
 @end

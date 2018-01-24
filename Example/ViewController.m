@@ -31,12 +31,12 @@
     menuView.delegate = self;
     menuView.menuTextColor = [UIColor redColor];
     menuView.menuItems = @[
-                           [LRCircleMenuItem itemWithIcon:@"gclive_favordeco_1_mt@2x.png" title:@"菜单1"],
-                           [LRCircleMenuItem itemWithIcon:@"gclive_favordeco_2_mt@2x.png" title:@"菜单2"],
-                           [LRCircleMenuItem itemWithIcon:@"gclive_favordeco_3_mt@2x.png" title:@"菜单3"],
-                           [LRCircleMenuItem itemWithIcon:@"gclive_favordeco_4_mt@2x.png" title:@"菜单4"],
-                           [LRCircleMenuItem itemWithIcon:@"gclive_favordeco_5_mt@2x.png" title:@"菜单5"],
-                           [LRCircleMenuItem itemWithIcon:@"gclive_favordeco_6_mt@2x.png" title:@"我的检测"],
+                           [LRCircleMenuItem itemWithIcon:@"gclive_favordeco_1_mt@2x.png" title:@"菜单1" class:[UIViewController class]],
+                           [LRCircleMenuItem itemWithIcon:@"gclive_favordeco_2_mt@2x.png" title:@"菜单2" class:[UIViewController class]],
+                           [LRCircleMenuItem itemWithIcon:@"gclive_favordeco_3_mt@2x.png" title:@"菜单3" class:[UIViewController class]],
+                           [LRCircleMenuItem itemWithIcon:@"gclive_favordeco_4_mt@2x.png" title:@"菜单4" class:[UIViewController class]],
+                           [LRCircleMenuItem itemWithIcon:@"gclive_favordeco_5_mt@2x.png" title:@"菜单5" class:[UIViewController class]],
+                           [LRCircleMenuItem itemWithIcon:@"gclive_favordeco_6_mt@2x.png" title:@"我的检测" class:[UIViewController class]],
                            ];
     menuView.identifierImageView.layer.borderColor = [[UIColor purpleColor] CGColor];
     menuView.identifierImageView.layer.borderWidth = 2.0;
@@ -54,6 +54,8 @@
     LRCircleMenuItem *item = menuView.menuItems[index];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"select at %ld, %@",index,item.title] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
+    //UIViewController *vc = item.cls.new;
+    //[self.navigationController pushViewController:vc animated:YES];
 }
 
 
